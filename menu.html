@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Menu Bar</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, rgb(64, 137, 201), rgb(0, 242, 254));
+    padding: 10px 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  .logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+  .menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: rgb(19, 4, 44);;
+    transition: width 0.3s ease;
+  }
+
+  .menu li a:hover {
+    color: rgb(19, 4, 44);
+  }
+
+  .menu li a:hover:{
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">MyLogo</div>
+  <ul class="menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
